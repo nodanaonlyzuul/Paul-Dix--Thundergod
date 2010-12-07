@@ -5,15 +5,16 @@ h1. Paul Dix: Thundergod
   You called down the thunder. Well, now you've got it! 
   
 h2. Requirements:
-# A command line audio player like afplay
+# The command line audio player afplay
 # Willingness to accept the respect and fear of your office mates.
    
 h2. How do I use Paul Dix: Thundergod
 # Slow down. You do not use Paul Dix. Paul Dix USES YOU.
-# Copy deploy_sound.aiff to somewhere like: APP_ROOT/config/deploy/deploy_sound.aiff
+# Install this gem
+      @gem install paul_dix_thundergod@
 # Write deploy task like (capistrano example):
       @task :play_sound do@
-        @`afplay config/deploy/deploy_sound.aiff &`@
+        @PaulDixThundergod.play@
       @end@
 #  Hook the task into your deployment script (capistrano example):
       @before "deploy", "deploy:play_sound"@
