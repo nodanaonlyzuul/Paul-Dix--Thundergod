@@ -1,6 +1,6 @@
 $spec = Gem::Specification.new do |s|
   s.name = "paul_dix_thundergod"
-  s.version = '0.0.1'
+  s.version = '0.0.5'
   s.summary = "Deploy with masculine confidence"
 
   s.authors  = ['Trotter Cashion', 'nodanaonlyzuul']
