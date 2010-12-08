@@ -2,12 +2,12 @@ h1. Paul Dix: Thundergod
 
   Thundergod is a lightweight, extensible framework for ensuring successful deployments by
   channeling undiluted and strapping technical prowess into your deployment scripts.
-  You called down the thunder. Well, now you've got it! 
-  
+  You called down the thunder. Well, now you've got it!
+
 h2. Requirements:
-# The command line audio player afplay
+# The command line audio player afplay or play
 # Willingness to accept the respect and fear of your office mates.
-   
+
 h2. How do I use Paul Dix: Thundergod
 # Slow down. You do not use Paul Dix. Paul Dix USES YOU.
 # Install this gem
