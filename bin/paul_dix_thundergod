@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'paul_dix_thundergod'
+
+PaulDixThundergod.play

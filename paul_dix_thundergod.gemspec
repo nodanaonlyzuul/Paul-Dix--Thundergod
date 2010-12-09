@@ -6,7 +6,9 @@ $spec = Gem::Specification.new do |s|
   s.authors  = ['Trotter Cashion', 'nodanaonlyzuul', 'flavorjones']
   s.email    = ['cashion@gmail.com']
   s.homepage = 'https://github.com/nodanaonlyzuul'
+  
+  s.executables = ['paul_dix_thundergod']
 
-  s.files = Dir['lib/**/*']
+  s.files = Dir['bin/*','lib/**/*']
   s.rubyforge_project = 'nowarning'
 end
