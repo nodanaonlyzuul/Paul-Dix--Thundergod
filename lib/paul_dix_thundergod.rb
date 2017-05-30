@@ -1,5 +1,5 @@
 module PaulDixThundergod
-  COMMANDS_TO_TRY = %w[afplay play]
+  COMMANDS_TO_TRY = %w[afplay play omxplayer]
 
   def self.play
     COMMANDS_TO_TRY.each do |command|
