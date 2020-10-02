@@ -4,7 +4,7 @@ module PaulDixThundergod
   def self.play
     COMMANDS_TO_TRY.each do |command|
       if system("which #{command}")
-        `#{command} #{File.dirname(__FILE__)}/paul_dix_thundergod/support/deploy_sound.mp3 &`
+        `#{command} #{asset_path("deploy_sound.mp3")} &`
         break
       end
     end
@@ -13,10 +13,15 @@ module PaulDixThundergod
   def self.rollback
     COMMANDS_TO_TRY.each do |command|
       if system("which #{command}")
-        `#{command} #{File.dirname(__FILE__)}/paul_dix_thundergod/support/rollback_sound.mp3 &`
+        `#{command} #{asset_path("rollback_sound.mp3")} &`
         break
       end
     end
   end
 
+  private
+
+  def self.asset_path(filename)
+    File.join(File.dirname(__FILE__), "paul_dix_thundergod/support", filename)
+  end
 end
