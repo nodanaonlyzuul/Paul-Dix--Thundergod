@@ -11,20 +11,34 @@
 
 ## How do I use Paul Dix: Thundergod
 
-1.  Slow down. You do not use Paul Dix. Paul Dix USES YOU.
+* Slow down:
 
-2.  Install this gem
-      `gem install paul_dix_thundergod`
-3.  Write deploy task like (capistrano example):
+  You do not use Paul Dix.
 
-        task :play_sound do
-          PaulDixThundergod.play
+  Paul Dix USES YOU.
+
+* Install this gem
+
+        group :development do
+          gem "paul_dix_thundergod", require: false
         end
 
-4.  Hook the task into your deployment script (capistrano example):
-      `before "deploy", "deploy:play_sound"`
+* Write a deploy task like: (capistrano example)
 
-5.  The gem also comes with with a PaulDixThundergod.rollback, a method worth hooking into your @before "deploy:rollback"@
+        require 'paul_dix_thundergod'
+
+        namespace :deploy do
+          task :play_sound do
+            PaulDixThundergod.play
+          end
+        end
+
+* Hook the task into your deployment script (capistrano example):
+
+        before "deploy", "deploy:play_sound"
+
+* The gem also comes with with a `PaulDixThundergod.rollback`, a method worth hooking into your `before "deploy:rollback"`
+
 
 ## Bringing Thunder From the Command Line
 
