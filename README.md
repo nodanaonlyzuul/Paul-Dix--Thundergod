@@ -17,31 +17,27 @@
 
   Paul Dix USES YOU.
 
-* Install this gem
+* use the deploy sounds:
 
-        group :development do
-          gem "paul_dix_thundergod", require: false
-        end
+Add it to your `Gemfile`:
 
-* Write a deploy task like: (capistrano example)
+```
+group :development do
+  gem "paul_dix_thundergod", require: false
+end
+```
 
-        require 'paul_dix_thundergod'
+require it in `config/deploy.rb`:
 
-        namespace :deploy do
-          task :play_sound do
-            PaulDixThundergod.play
-          end
-        end
+```
+require 'paul_dix_thundergod/deploy_sounds'
+```
 
-* Hook the task into your deployment script (capistrano example):
+Then try a deploy with `cap deploy` or `cap deploy:migrations`.
 
-        before "deploy", "deploy:play_sound"
-        before "deploy:migrations", "deploy:play_sound"
-
-
-* The gem also comes with with a `PaulDixThundergod.rollback`, a method worth hooking into your `before "deploy:rollback"`
+* The gem also comes with with a bonus rollback sound.
 
 
 ## Bringing Thunder From the Command Line
 
-The gem comes with a bin so you can just type 'paul_dix_thundergod' whenever you want!
+The gem comes with a bin so you can just type `paul_dix_thundergod` whenever you want!
