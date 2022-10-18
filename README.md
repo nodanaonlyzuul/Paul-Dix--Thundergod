@@ -36,6 +36,8 @@
 * Hook the task into your deployment script (capistrano example):
 
         before "deploy", "deploy:play_sound"
+        before "deploy:migrations", "deploy:play_sound"
+
 
 * The gem also comes with with a `PaulDixThundergod.rollback`, a method worth hooking into your `before "deploy:rollback"`
 
