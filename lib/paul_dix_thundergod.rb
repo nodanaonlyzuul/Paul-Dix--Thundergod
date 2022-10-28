@@ -8,7 +8,7 @@ module PaulDixThundergod
 
     COMMANDS_TO_TRY.each do |command|
       if system("which #{command}")
-        `#{command} #{asset_path("deploy_sound.mp3")} &`
+        spawn("#{command} #{asset_path("deploy_sound.mp3")}")
         break
       end
     end
@@ -17,7 +17,7 @@ module PaulDixThundergod
   def self.rollback
     COMMANDS_TO_TRY.each do |command|
       if system("which #{command}")
-        `#{command} #{asset_path("rollback_sound.mp3")} &`
+        spawn("#{command} #{asset_path("rollback_sound.mp3")}")
         break
       end
     end
